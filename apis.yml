@@ -1,23 +1,78 @@
 aid: netease-cloud-music
+
 name: NetEase Cloud Music
-description: 'NetEase Cloud Music is a company surfaced via the API Evangelist harvest backlog (source:
-  music) and added to the network as a stub for full-pipeline profiling.'
+
+image: http://p3.music.126.net/tBTNafgjNnTL1KlZMt7lVA==/18885211718935735.jpg
+
+description: 'NetEase Cloud Music (网易云音乐) is a leading Chinese music streaming service offering a vast library of songs, playlists, podcasts, and user‑generated content. Users can discover music, create personal playlists, follow artists, and access high‑quality audio via web and mobile apps. The platform provides APIs for searching tracks, retrieving album details, managing user libraries, and streaming content, serving both consumer and developer ecosystems.'
+
 url: https://raw.githubusercontent.com/api-evangelist/netease-cloud-music/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:music
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-23'
+
 modified: '2026-09-23'
+
 tags:
 - Company
-apis: []
+- Music
+- Streaming
+- Chinese
+- API
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/netease-cloud-music-well-known.yml
+- type: Hosts
+  url: hosts/netease-cloud-music-hosts.yml
+- type: Support
+  url: http://help.mail.163.com/service.html
+- type: Login
+  url: https://music.163.com/login
+- type: Blog
+  url: https://blog.163.com/
+- type: DomainSecurity
+  url: security/netease-cloud-music-domain-security.yml
 - type: Website
   url: https://music.163.com/
+- type: DeveloperPortal
+  url: https://developer.music.163.com/st/developer/
+- type: Documentation
+  url: https://developer.music.163.com/st/developer/document
+- type: TermsOfService
+  url: https://st.music.163.com/official-terms/service
+- type: PrivacyPolicy
+  url: https://st.music.163.com/official-terms/privacy
+- type: ChildrenPrivacyPolicy
+  url: https://st.music.163.com/official-terms/children
+
+apis: []
+
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  detail: Front page https://music.163.com/ returns a bot challenge, preventing access to API docs.
+  evidence:
+    - url: https://music.163.com/
+      status: 200
+  checked: 2026-09-23
+x-enrichment:
+  date: '2026-09-23'
+  status: enriched
+  artifacts_added: 13
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
