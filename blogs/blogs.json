@@ -1,0 +1,14 @@
+{
+  "repo": "netease-cloud-music",
+  "feeds": [
+    {
+      "source": "https://music.163.com/login",
+      "feed_url": "https://music.163.com/login",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-10-03T12:30:02Z"
+}
